@@ -3,7 +3,6 @@ import { AppLayout } from "../../components/AppLayout";
 import { useState } from "react";
 import Markdown from "react-markdown";
 import { useRouter } from "next/router";
-//mongoose.connect('mongodb+srv://new_user:mayank123@cluster0.at9io.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0')
 
 export default function NewPost(props) {
   const router = useRouter();
