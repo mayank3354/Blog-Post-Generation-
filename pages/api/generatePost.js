@@ -26,6 +26,16 @@ export default withApiAuthRequired(async function handler(req, res) {
 
   const { topic, keywords } = req.body;
 
+  if(!topic || !keywords){
+    res.status(422);
+    return;
+  }
+
+  if(topic.length > 80 || keywords.length > 80){
+    res.status(422);
+    return;
+  }
+
   try {
     // Generate Blog Post
     const chat = model.startChat({
